@@ -9,7 +9,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="450dp"
         android:layout_weight="1"
         android:orientation="vertical"></LinearLayout>
 
@@ -31,8 +31,9 @@
                 android:layout_weight="1"
                 android:layout_marginStart="5dp"
                 android:textSize="20dp"
-
-                android:text="7" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/numberSeven" />
             <Button
                 android:id="@+id/btn8"
                 android:layout_width="100dp"
@@ -40,8 +41,9 @@
                 android:layout_weight="1"
                 android:layout_marginStart="5dp"
                 android:textSize="20dp"
-
-                android:text="8" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/numberEight" />
             <Button
                 android:id="@+id/btn9"
                 android:layout_width="100dp"
@@ -49,8 +51,9 @@
                 android:layout_weight="1"
                 android:textSize="20dp"
                 android:layout_marginStart="5dp"
-
-                android:text="9" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/numberNine" />
             <Button
                 android:id="@+id/btnDivide"
                 android:layout_width="100dp"
@@ -59,7 +62,9 @@
                 android:textSize="20dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="/" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/signDivide" />
 
 
         </LinearLayout>
@@ -75,8 +80,9 @@
                 android:layout_weight="1"
                 android:layout_marginStart="5dp"
                 android:textSize="20dp"
-
-                android:text="4" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/numberFour" />
             <Button
                 android:id="@+id/btn5"
                 android:layout_width="100dp"
@@ -84,8 +90,9 @@
                 android:layout_weight="1"
                 android:layout_marginStart="5dp"
                 android:textSize="20dp"
-
-                android:text="5" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/numberFive" />
             <Button
                 android:id="@+id/btn6"
                 android:layout_width="100dp"
@@ -93,8 +100,9 @@
                 android:layout_weight="1"
                 android:textSize="20dp"
                 android:layout_marginStart="5dp"
-
-                android:text="6" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/numberSix" />
             <Button
                 android:id="@+id/btnMultiply"
                 android:layout_width="100dp"
@@ -102,14 +110,16 @@
                 android:layout_weight="1"
                 android:textSize="20dp"
                 android:layout_marginStart="5dp"
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
                 android:layout_marginEnd="5dp"
-                android:text="*" />
+                android:text="@string/signMultiply" />
 
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
@@ -119,8 +129,9 @@
                 android:layout_weight="1"
                 android:layout_marginStart="5dp"
                 android:textSize="20dp"
-
-                android:text="1" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/numberOne" />
             <Button
                 android:id="@+id/btn2"
                 android:layout_width="100dp"
@@ -128,8 +139,9 @@
                 android:layout_weight="1"
                 android:layout_marginStart="5dp"
                 android:textSize="20dp"
-
-                android:text="2" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/numberTwo" />
             <Button
                 android:id="@+id/btn3"
                 android:layout_width="100dp"
@@ -137,61 +149,88 @@
                 android:layout_weight="1"
                 android:textSize="20dp"
                 android:layout_marginStart="5dp"
-
-                android:text="3" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/numberThree" />
             <Button
-                android:id="@+id/btnDivide"
+                android:id="@+id/btnMinus"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:textSize="20dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="/" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/signMinus" />
 
 
         </LinearLayout>
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn7"
+                android:id="@+id/btnDot"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:layout_marginStart="5dp"
-
-
-                android:text="7" />
+                android:textSize="20dp"
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/signDot" />
             <Button
-                android:id="@+id/btn8"
+                android:id="@+id/btnZero"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
                 android:layout_marginStart="5dp"
-
-
-                android:text="8" />
+                android:textSize="20dp"
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/numberZero" />
             <Button
-                android:id="@+id/btn9"
+                android:id="@+id/btnCLR"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-
+                android:textSize="20dp"
                 android:layout_marginStart="5dp"
-
-                android:text="9" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/signCLR" />
             <Button
-                android:id="@+id/btnDivide"
+                android:id="@+id/btnPlus"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_weight="1"
-
+                android:textSize="20dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginEnd="5dp"
-                android:text="/" />
+                android:backgroundTint="@color/grayCustom"
+                android:textColor="@color/textGrayCustom"
+                android:text="@string/signPlus" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnEqual"
+                android:layout_width="399dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:backgroundTint="@color/grayCustom"
+                android:text="@string/signEquals"
+                android:textColor="@color/textGrayCustom"
+                android:textSize="40dp" />
+
+
 
 
         </LinearLayout>
