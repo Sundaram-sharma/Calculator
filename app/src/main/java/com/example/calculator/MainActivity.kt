@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
+import java.lang.ArithmeticException
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    //to get the vale from the button display of the textview
+    //to get the value from the button display of the textview
     fun getDigit(view: View){
         tvDisplay.append((view as Button).text)
 
@@ -69,6 +71,16 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun onEqual(view: View){
+
+        if(isLastNumeric){ //the last value should be number only then it wil work
+
+
+        }
+
+    }
+
+
     private fun isOperatorAdded(value: String): Boolean {
 
         /**
@@ -101,5 +113,92 @@ class MainActivity : AppCompatActivity() {
         return value
     }
 
+    fun OnEqual(view: View){
+
+        if(isLastNumeric)
+        {
+        var tvValue = tvDisplay.text.toString() //convert the value to string
+        var prefix = ""
+
+            try{
+
+            //when the value starts with minus, we will seperate the values
+
+                if(tvValue.startsWith("-"))
+                {
+                    prefix = "-"
+                    tvValue = tvValue.substring(1);
+                }
+
+                //When we have division sign
+                when{
+                    tvValue.contains("/")->{
+                        val splitValues =tvValue.split("/") //We will split the value witht the "/" sign
+                        var one = splitValues[0]
+                        var two = splitValues[1]
+
+                        if(prefix.isNotEmpty()){
+                        one = prefix + one // we will append the value
+                        }
+
+                        //Now we have to calculate the main login wiht this
+                        // We will use remove the 'removeZeroAfterDot' to remove extra zeros
+
+                        tvDisplay?.text =removeZeroAfterDot((one.toDouble() / two.toDouble()).toString())
+                    }
+
+                    tvValue.contains("*")->{
+                        val splitValues =tvValue.split("*") //We will split the value witht the "/" sign
+                        var one = splitValues[0]
+                        var two = splitValues[1]
+
+                        if(prefix.isNotEmpty()){
+                            one = prefix + one // we will append the value
+                        }
+
+                        //Now we have to calculate the main login wiht this
+                        // We will use remove the 'removeZeroAfterDot' to remove extra zeros
+
+                        tvDisplay?.text =removeZeroAfterDot((one.toDouble() * two.toDouble()).toString())
+                    }
+
+                    tvValue.contains("+")->{ // if it contains +
+                        val splitValues =tvValue.split("+") //We will split the value witht the "+" sign
+                        var one = splitValues[0]
+                        var two = splitValues[1]
+
+                        if(prefix.isNotEmpty()){
+                            one = prefix + one // we will append the value
+                        }
+
+                        //Now we have to calculate the main login wiht this
+                        // We will use remove the 'removeZeroAfterDot' to remove extra zeros
+
+                        tvDisplay?.text =removeZeroAfterDot((one.toDouble() + two.toDouble()).toString())
+                    }
+
+                    tvValue.contains("-")->{
+                        val splitValues =tvValue.split("-") //We will split the value with the "-" sign
+                        var one = splitValues[0]
+                        var two = splitValues[1]
+
+                        if(prefix.isNotEmpty()){
+                            one = prefix + one // we will append the value
+                        }
+
+                        //Now we have to calculate the main login wiht this
+                        // We will use remove the 'removeZeroAfterDot' to remove extra zeros
+
+                        tvDisplay?.text =removeZeroAfterDot((one.toDouble() - two.toDouble()).toString())
+                    }
+
+                }
+
+            }catch (e: ArithmeticException){
+                e.printStackTrace()
+            }
+        }
+
+    }
 
 }
